@@ -474,18 +474,37 @@ h6,
 .card-r:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/about/school_building.png) center center no-repeat;
-    background-size: cover;
-    /* Corrected: 'p×' to 'px' and added a space for readability. */
-    /* Consider if 1366px is truly the desired fixed height; often, min-height is better for responsiveness. */
-    height: 550px ; 
-    /* Corrected: 'p×' to 'px' and added a space. */
-    /* WARNING: Setting a fixed 'width' like 647px is almost always problematic for responsiveness. */
-    /* It's usually better to use max-width: 100% or let the parent container define width. */
-    width: 1366px; /* <-- Be very cautious with fixed widths. See explanation below. */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+                url(../img/about/school_building.png) center center no-repeat;
+    background-size: cover;   /* keeps image responsive */
+    width: 100%;              /* always full width */
+    min-height: 300px;        /* default height for mobile */
+    padding: 2rem; 
+    text-align: center;           /* spacing for small screens */
 }
+
+/* Tablets (≥ 768px) */
+@media (min-width: 768px) {
+    .page-header {
+        min-height: 400px;
+        padding: 3rem;
+        display: flex;            /* allows content centering */
+    align-items: top;
+    justify-content: center;
+    text-align: left;
+    }
+}
+
+/* Desktops (≥ 1200px) */
+@media (min-width: 1200px) {
+    .page-header {
+        min-height: 550px;
+        padding: 5rem;
+    }
+}
+
+
 
 .breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
