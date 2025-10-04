@@ -476,11 +476,11 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/sch22.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/about/school_building.png) center center no-repeat;
     background-size: cover;
     /* Corrected: 'p×' to 'px' and added a space for readability. */
     /* Consider if 1366px is truly the desired fixed height; often, min-height is better for responsiveness. */
-    height: 647px ; 
+    height: 550px ; 
     /* Corrected: 'p×' to 'px' and added a space. */
     /* WARNING: Setting a fixed 'width' like 647px is almost always problematic for responsiveness. */
     /* It's usually better to use max-width: 100% or let the parent container define width. */
